@@ -35,7 +35,7 @@ public class AssetsController {
     }
 
     @PutMapping
-    public ResponseEntity<AssetsResponseDto> updateAsserts(
+    public ResponseEntity<AssetsResponseDto> updateAssets(
             @RequestBody AssetsRequestDto assetsRequestDto, @RequestParam String serial
     ) {
         return ResponseEntity.ok(updateAssetsHandler.execute(assetsRequestDto, serial));
