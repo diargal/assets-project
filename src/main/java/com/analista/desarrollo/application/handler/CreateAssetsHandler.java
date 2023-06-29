@@ -22,9 +22,7 @@ public class CreateAssetsHandler {
 
     public AssetsResponseDto execute(AssetsRequestDto assetsRequestDto) {
         Assets asset = assetsFactory.buildFull(assetsRequestDto);
-        Assets assets = createAssetsService.execute(asset);
 
-        return assetsMapper.toDto(assets);
-
+        return assetsMapper.toDto(createAssetsService.execute(asset));
     }
 }

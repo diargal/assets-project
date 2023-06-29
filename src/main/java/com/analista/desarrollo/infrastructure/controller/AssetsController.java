@@ -31,8 +31,7 @@ public class AssetsController {
     public ResponseEntity<AssetsResponseDto> createAssets(
             @RequestBody AssetsRequestDto assetsRequestDto
     ) {
-        AssetsResponseDto assetsResponseDto = createAssetsHandler.execute(assetsRequestDto);
-        return ResponseEntity.ok(assetsResponseDto);
+        return ResponseEntity.ok(createAssetsHandler.execute(assetsRequestDto));
     }
 
     @PutMapping
